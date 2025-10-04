@@ -102,11 +102,11 @@ export default function Tasks() {
         <TableBody>
           {tasks?.map((t) => (
             <TableRow key={t.id}>
-              <TableCell className="font-medium">{t.id}</TableCell>
-              <TableCell className="font-medium">{t.title}</TableCell>
-              <TableCell>{t.description}</TableCell>
-              <TableCell>{t.dueDate}</TableCell>
-              <TableCell className="text-right">{t.priority}</TableCell>
+              <TableCell className="font-medium">{t?.id}</TableCell>
+              <TableCell className="font-medium">{t?.title}</TableCell>
+              <TableCell>{t?.description}</TableCell>
+              <TableCell>{t?.dueDate}</TableCell>
+              <TableCell className="text-right">{t?.priority}</TableCell>
               <TableCell className="text-right flex gap-2 justify-end">
                 <Button
                   onClick={() => dispatch(deleteTask(t))}
